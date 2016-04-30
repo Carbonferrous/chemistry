@@ -1,4 +1,5 @@
 Electrons
+s, p, d, f
 Elements, Atoms
 •	Valence Electrons, Bonding Electrons, orbital, Electron Configuration (Vesper)
 •	Bonds, Type(Ionic, Covalent), strength, MO, bond orbital, magnetism (para, di)
@@ -7,8 +8,9 @@ Elements, Atoms
 •	Protons, Neutrons
 •	charge
 •	Name
+•	IMF
 Molecules
-•	Element/Molecule constituents, structure
+•	Element/Molecule constituents, structure, bond matrix
 •	Charge(sum charges of atoms)
 •	Polarity
 •	Mass(sum of masses of atoms)
