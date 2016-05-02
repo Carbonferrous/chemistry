@@ -1,5 +1,8 @@
-Electrons
-s, p, d, f
+Electrons - tree n, l, m, s
+•	n = 1, 2, ...
+•	l = 0, 1, 2, ..., n - 1
+•	m = -l, ..., 0, ..., l
+•	s = +-1/2
 Elements, Atoms
 •	Valence Electrons, Bonding Electrons, orbital, Electron Configuration (Vesper)
 •	Bonds, Type(Ionic, Covalent), strength, MO, bond orbital, magnetism (para, di)
@@ -7,7 +10,7 @@ Elements, Atoms
 •	Mass
 •	Protons, Neutrons
 •	charge
-•	Name
+•	Name, symbol
 •	IMF
 Molecules
 •	Element/Molecule constituents, structure, bond matrix
