@@ -2,11 +2,18 @@ import java.util.*;
 
 public class Test
 {
-	private static int[][][][] electrons = new int[7][7][13][2];
-	private static int count = 120;
 	public static void main(String args[])
 	{
-		Atom H = new Atom(1);
+		Atom A = new Atom(79);
+		A.fillElectrons(1);
+		for(int[] e:A.getElectrons())
+		{
+			for(int x:e)
+			{
+				System.out.print(x + " ");
+			}
+			System.out.println();
+		}
 		
 	}
 }

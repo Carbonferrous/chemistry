@@ -17,8 +17,11 @@ class Atom
 		protons = p;
 		electrons = new int[7][];
 		for(int x = 0; x < 7; x ++)
-			electrons[x] = new int[2*x*x];
-//		fillElectrons(p);
+			electrons[x] = new int[x+1];
+		for(int x = 0; x < electrons.length; x ++)
+			for(int y = 0; y < x; y ++)
+				electrons[x][y] = 0;
+		fillElectrons(p);
 		try
 		{
 			Scanner input = new Scanner(new File("Atom_data\\"+p+".txt"));
@@ -36,46 +39,36 @@ class Atom
 			neutrons = (int)Math.round(.0051*p*p+1.1286*p-1.3944);
 			mass = protons + neutrons;
 //			electronegativity = getStabilityScore();
+			electronegativity = 0;
 		}
 	}
 	//***************************Mutators***************************
-//	public void fillElectrons(int count)
-//	{
-//		int n = 1;
-//		int l = 0;
-//		for(int s = 1; s < 9; s ++)
-//		{
-//			if(count <= 0)
-//				break;
-//			n = s/2 + 1;
-//			l = s - n;
-//			while(l > -1 && l < n)
-//			{
-//				for(int m = -l; m < l + 1; m ++)
-//				{
-//					electrons[n-1][l][m+l][0] = 1;
-//					count --;
-//					if(count <= 0)
-//						break;
-//				}
-//				if(count <= 0)
-//					return;
-//				for(int m = -l; m < l + 1; m ++)
-//				{
-//					electrons[n-1][l][m+l][1] = -1;
-//					count --;
-//					if(count <= 0)
-//						break;
-//				}
-//				n ++;
-//				l --;
-//				if(count <= 0)
-//					break;
-//			}
-//			if(count <= 0)
-//				break;
-//		}
-//	}
+	public void fillElectrons(int count)
+	{
+		int n = 1;
+		int l = 0;
+		for(int s = 1; s < 9; s ++)
+		{
+			if(count <= 0)
+				break;
+			n = s/2 + 1;
+			l = s - n;
+			while(l > -1 && l < n)
+			{
+				while(count > 0 && electrons[n-1][l] < 4 * l + 2)
+				{
+					electrons[n-1][l] += 1;
+					count --;
+				}
+				n ++;
+				l --;
+				if(count <= 0)
+					break;
+			}
+			if(count <= 0)
+				break;
+		}
+	}
 //	public void addElectrons()
 //	public void removeElectrons()
 //	public void exciteElectron(int nstart, int lstart, int nend, int lend)
