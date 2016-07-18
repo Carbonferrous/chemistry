@@ -1,0 +1,14 @@
+Graph = (V(G), E(G)) where V(G) are the vertexes and E(G) are the edges
+Molecular graphs have edge multiplicity and labeled vertex
+Atom valence = vertex degree
+bond order = edge multiplicity
+The valence sequence of benzene is (6,0,0,6)
+Store as nx1 vector for element
+nxn ajacency matrix, diagonals are 0, conectivity stack read from upper right to left of upper triangle
+Reference 9 for maximizing conectivity stack
+Reference 10 same as above
+Reference 11 polynomial time solver of isomorphisms
+Pg 16 D6h group automorphisms of benzene
+Reference 15 for counting alkanes
+Reference 16 for Polya's paper
+Reference 26 chiral and achiral molecules
