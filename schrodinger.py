@@ -22,4 +22,4 @@ def sbox(nx, ny, nz, n = 1000):
     ax.set_zlabel('Z Label')
     plt.show()
 
-sbox(2, 2, 2)
+sbox(1, 2, 3)
